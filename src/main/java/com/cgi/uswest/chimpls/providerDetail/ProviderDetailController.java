@@ -1,9 +1,12 @@
 package com.cgi.uswest.chimpls.providerDetail;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,5 +22,10 @@ public class ProviderDetailController {
 		// This returns a JSON or XML with the users
 		return providerDetailRepository.findAll();
 	}
+	
+	  @RequestMapping("/{idprvdorg}")
+	   public ProviderDetail findOne(@PathVariable("idprvdorg") String idprvdorg) {
+	       return providerDetailRepository.findProviderDetailCustomIdPrvdOrg(idprvdorg);
+	   }
 
 }
