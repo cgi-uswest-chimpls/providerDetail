@@ -15,7 +15,8 @@ public class ProviderDetail {
 	private String id_provider_org;
     private String nm_prvd;
     private String tx_license;
-	
+	private String tximagelink;
+    
     public String getId_provider_org() {
 		return id_provider_org;
 	}
@@ -33,5 +34,11 @@ public class ProviderDetail {
 	}
 	public void setTx_license(String tx_license) {
 		this.tx_license = tx_license;
+	}
+	public String getTximagelink() {
+		return tximagelink;
+	}
+	public void setTximagelink(String tximagelink) {
+		this.tximagelink = tximagelink;
 	}
 }
