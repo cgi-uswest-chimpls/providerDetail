@@ -1,0 +1,15 @@
+---
+applications:
+- name: providerDetail
+  memory: 750M
+  timeout: 180
+  env:
+    APP_VERSION: blue
+  path: C:\My_Data\sts\workspace\providerDetail\build\libs\providerDetail-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  routes:
+  - route: providerDetail.cfapps.io
+services:
+  - provider_detail
+  - cw-portal-service-registry
+  - cw-portal-config-server
