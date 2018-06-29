@@ -12,14 +12,15 @@ public class ProviderDetail {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	
-	private BigDecimal id_provider_org;
+	private String id_provider_org;
     private String nm_prvd;
     private String tx_license;
-	
-    public BigDecimal getId_provider_org() {
+	private String tximagelink;
+    
+    public String getId_provider_org() {
 		return id_provider_org;
 	}
-	public void setId_provider_org(BigDecimal id_provider_org) {
+	public void setId_provider_org(String id_provider_org) {
 		this.id_provider_org = id_provider_org;
 	}
 	public String getNm_prvd() {
@@ -33,5 +34,11 @@ public class ProviderDetail {
 	}
 	public void setTx_license(String tx_license) {
 		this.tx_license = tx_license;
+	}
+	public String getTximagelink() {
+		return tximagelink;
+	}
+	public void setTximagelink(String tximagelink) {
+		this.tximagelink = tximagelink;
 	}
 }
